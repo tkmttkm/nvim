@@ -21,7 +21,7 @@ map("n",                    "<A-Up>",       ":m .-2<CR>==",                     
 map("n",                    "<C-A-Down>",   ":t .<CR>",                                                       { noremap = true, silent = true })
 map("n",                    "<C-A-Up>",     ":t -1<CR>",                                                      { noremap = true, silent = true })
 map("n",                    "<C-w>c",       ":bd<CR>",                                                        { noremap = true, silent = true })
-map("n",                    "<C-p>",        "\"0p",                                                           { noremap = true, silent = true }) -- 最後のヤンクをペースト
+map("n",                    "<C-p>",        "\"0p",                                                           { noremap = true, silent = true })
 map("n",                    "<C-PageDown>", ":bnext<CR>",                                                     { noremap = true, silent = true })
 map("n",                    "<C-PageUp>",   ":bprevious<CR>",                                                 { noremap = true, silent = true })
 map("n",                    "<A-Left>",     "<C-o>",                                                          { noremap = true, silent = true })
@@ -63,6 +63,7 @@ map("i", "<A-Down>",   "<Esc>:m .+1<CR>==gi", { noremap = true, silent = true })
 map("i", "<A-Up>",     "<Esc>:m .-2<CR>==gi", { noremap = true, silent = true })
 map("i", "<C-A-Down>", "<Esc>:t .<CR>gi",     { noremap = true, silent = true })
 map("i", "<C-A-Up>",   "<Esc>:t -1<CR>gi",    { noremap = true, silent = true })
+map("i", "<C-p>",      "<Esc>\"0p<CR>gi",     { noremap = true, silent = true })
 
 -- Telescope
 map("n", "<leader>//",   ":Telescope live_grep<CR>",   { desc = "Telescope live_grep" })
