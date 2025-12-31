@@ -92,78 +92,79 @@ map("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>", { desc = "Preview"})
 map("n", "<leader>ms", "<cmd>MarkdownPreviewStop<cr>",   { desc = "Stop Preview"})
 
 -- phpactor
+which_key.add({"<leader>p", group = "Php"})
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "php",
   callback = function(ev)
     local buf = ev.buf
-    which_key.add({"<leader>p", group = "PhpActor"})
-    map("n", "<leader>pc", "<cmd>PhpActor import_class<CR>", {
+    which_key.add({"<leader>pa", group = "PhpActor"})
+    map("n", "<leader>pac", "<cmd>PhpActor import_class<CR>", {
       buffer = buf,
-      desc = "PhpActor: Import class (カーソル位置)",
+      desc = "Import class (カーソル位置)",
     })
-    map("n", "<leader>pC", "<cmd>PhpActor import_missing_classes<CR>", {
+    map("n", "<leader>paC", "<cmd>PhpActor import_missing_classes<CR>", {
       buffer = buf,
-      desc = "PhpActor: Import missing classes (未インポート全部)",
+      desc = "Import missing classes (未インポート全部)",
     })
-    map("n", "<leader>p?", "<cmd>PhpActor context_menu<CR>", {
+    map("n", "<leader>pa?", "<cmd>PhpActor context_menu<CR>", {
       buffer = buf,
-      desc = "PhpActor: Context menu",
+      desc = "Context menu",
     })
-    map("n", "<leader>pn", "<cmd>PhpActor new_class<CR>", {
+    map("n", "<leader>pan", "<cmd>PhpActor new_class<CR>", {
       buffer = buf,
-      desc = "PhpActor: Create new class",
+      desc = "Create new class",
     })
-    map("n", "<leader>pm", "<cmd>PhpActor move_class<CR>", {
+    map("n", "<leader>pam", "<cmd>PhpActor move_class<CR>", {
       buffer = buf,
-      desc = "PhpActor: Move class (ファイル移動 + namespace 修正)",
+      desc = "Move class (ファイル移動 + namespace 修正)",
     })
-    map("n", "<leader>px", "<cmd>PhpActor expand_class<CR>", {
+    map("n", "<leader>pax", "<cmd>PhpActor expand_class<CR>", {
       buffer = buf,
-      desc = "PhpActor: Expand class skeleton",
+      desc = "Expand class skeleton",
     })
-    map("n", "<leader>pa", "<cmd>PhpActor generate_accessor<CR>", {
+    map("n", "<leader>paa", "<cmd>PhpActor generate_accessor<CR>", {
       buffer = buf,
-      desc = "PhpActor: Generate accessor (getter/setter)",
+      desc = "Generate accessor (getter/setter)",
     })
-    map("n", "<leader>pv", "<cmd>PhpActor change_visibility<CR>", {
+    map("n", "<leader>pav", "<cmd>PhpActor change_visibility<CR>", {
       buffer = buf,
-      desc = "PhpActor: Change visibility (public/private/protected)",
+      desc = "Change visibility (public/private/protected)",
     })
-    map("n", "<leader>pt", "<cmd>PhpActor transform<CR>", {
+    map("n", "<leader>pat", "<cmd>PhpActor transform<CR>", {
       buffer = buf,
-      desc = "PhpActor: Transform (refactor menu)",
+      desc = "Transform (refactor menu)",
     })
-    map("n", "<leader>pN", "<cmd>PhpActor navigate<CR>", {
+    map("n", "<leader>paN", "<cmd>PhpActor navigate<CR>", {
       buffer = buf,
-      desc = "PhpActor: Navigate class tree",
+      desc = "Navigate class tree",
     })
-    map("n", "<leader>ps", "<cmd>PhpActor status<CR>", {
+    map("n", "<leader>pas", "<cmd>PhpActor status<CR>", {
       buffer = buf,
-      desc = "PhpActor: Status",
+      desc = "Status",
     })
-    map("n", "<leader>pS", "<cmd>PhpActor lsp/status<CR>", {
+    map("n", "<leader>paS", "<cmd>PhpActor lsp/status<CR>", {
       buffer = buf,
-      desc = "PhpActor: LSP status",
+      desc = "LSP status",
     })
-    map("n", "<leader>pR", "<cmd>PhpActor lsp/reindex<CR>", {
+    map("n", "<leader>paR", "<cmd>PhpActor lsp/reindex<CR>", {
       buffer = buf,
-      desc = "PhpActor: Reindex project (重い)",
+      desc = "Reindex project (重い)",
     })
-    map("n", "<leader>pK", "<cmd>PhpActor cache_clear<CR>", {
+    map("n", "<leader>paK", "<cmd>PhpActor cache_clear<CR>", {
       buffer = buf,
-      desc = "PhpActor: Clear PhpActor cache",
+      desc = "Clear PhpActor cache",
     })
-    map("n", "<leader>pf", "<cmd>PhpActor copy_fcqn<CR>", {
+    map("n", "<leader>paf", "<cmd>PhpActor copy_fcqn<CR>", {
       buffer = buf,
-      desc = "PhpActor: Copy FQCN (完全修飾クラス名)",
+      desc = "Copy FQCN (完全修飾クラス名)",
     })
-    map("n", "<leader>pU", "<cmd>PhpActor update<CR>", {
+    map("n", "<leader>paU", "<cmd>PhpActor update<CR>", {
       buffer = buf,
-      desc = "PhpActor: Update PhpActor",
+      desc = "Update PhpActor",
     })
-    map("n", "<leader>pO", "<cmd>PhpActor config<CR>", {
+    map("n", "<leader>paO", "<cmd>PhpActor config<CR>", {
       buffer = buf,
-      desc = "PhpActor: Open PhpActor config",
+      desc = "Open PhpActor config",
     })
   end,
 })
@@ -195,11 +196,11 @@ map("v", "<leader>Cs", require("codex").actions.send_selection, { desc = "Codex:
 which_key.add({"<leader>G", group = "Preview"})
 local preview_ok, gp = pcall(require, "goto-preview")
 if preview_ok then
-    map("n", "Gp", function()
+    map("n", "<leader>Gp", function()
         gp.goto_preview_definition()
     end, { desc = "Go to Preview" })
 
-    map("n", "GP", function()
+    map("n", "<leader>GP", function()
         gp.close_all_win()
     end, { desc = "Close Preview" })
 end
