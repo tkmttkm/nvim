@@ -64,7 +64,7 @@ return {
                 request = "launch",
                 port = 9003,
                 pathMappings = {
-                    ["/var/www/html"] = "デバックしたいプロジェクトフォルダパス",
+                    ["/var/www/html"] = vim.fn.getcwd(),
                 },
             },
         }
