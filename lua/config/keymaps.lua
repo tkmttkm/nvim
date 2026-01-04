@@ -65,6 +65,9 @@ map("i", "<C-A-Down>", "<Esc>:t .<CR>gi",     { noremap = true, silent = true })
 map("i", "<C-A-Up>",   "<Esc>:t -1<CR>gi",    { noremap = true, silent = true })
 map("i", "<C-p>",      "<Esc>\"0p<CR>gi",     { noremap = true, silent = true })
 
+-- gitgraph
+map("n", "<leader>gl", function() require('gitgraph').draw({}, { all = true, max_count = 5000 }) end, {desc = "GitGraph - Draw"})
+
 -- Telescope
 map("n", "<leader>//",   ":Telescope live_grep<CR>",   { desc = "Telescope live_grep" })
 map("n", "<leader>/s",   ":Telescope grep_string<CR>", { desc = "Telescope grep_string" })
