@@ -353,7 +353,7 @@ vim.api.nvim_create_autocmd("FileType", {
     callback = function(ev)
         local buf = ev.buf
 
-        vim.keymap.set("n", "<leader>mCP", function()
+        map("n", "<leader>mCP", function()
             local input = vim.api.nvim_buf_get_name(buf)
             if input == "" then
                 print("このバッファにはファイル名がありません")
