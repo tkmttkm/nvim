@@ -224,9 +224,11 @@ map("n", "<leader>tJc", "<cmd>Translate JA -output=register<CR>", {desc = "EN �
 map("n", "<leader>tJp", "<cmd>Translate JA -output=replace<CR>",  {desc = "EN → JA 置換"})
 map("n", "<leader>tp",  "\"\"p",                                  {desc = "翻訳結果ペースト"})
 map("x", "<leader>te",  "<cmd>Translate EN<CR>",                  {desc = "JP → EN 翻訳"})
-map("x", "<leader>tE",  "<cmd>Translate EN -output=register<CR>", {desc = "JP → EN コピー"})
+map("x", "<leader>tEc", "<cmd>Translate EN -output=register<CR>", {desc = "JP → EN コピー"})
+map("x", "<leader>tEp", "<cmd>Translate EN -output=replace<CR>",  {desc = "JP → EN 置換"})
 map("x", "<leader>tj",  "<cmd>Translate JA<CR>",                  {desc = "EN → JA 翻訳"})
-map("x", "<leader>tJ",  "<cmd>Translate JA -output=register<CR>", {desc = "EN → JA コピー"})
+map("x", "<leader>tJc", "<cmd>Translate JA -output=register<CR>", {desc = "EN → JA コピー"})
+map("x", "<leader>tJp", "<cmd>Translate JA -output=replace<CR>",  {desc = "EN → JA 置換"})
 map("x", "<leader>tp",  "\"\"p",                                  {desc = "翻訳結果ペースト"})
 
 -- transparent
