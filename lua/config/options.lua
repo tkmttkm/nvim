@@ -26,3 +26,6 @@ vim.g.doge_doc_standard_javascript = "jsdoc"
 opt.diffopt:append("algorithm:patience")
 opt.diffopt:append("linematch:60")
 opt.diffopt:append("iblank")
+
+-- codex
+vim.env.PATH = vim.env.HOME .. "/.npm-global/bin:" .. vim.env.PATH
