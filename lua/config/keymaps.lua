@@ -20,7 +20,7 @@ map("n",                    "<A-Down>",     ":m .+1<CR>==",                     
 map("n",                    "<A-Up>",       ":m .-2<CR>==",                                                   { noremap = true, silent = true })
 map("n",                    "<C-A-Down>",   ":t .<CR>",                                                       { noremap = true, silent = true })
 map("n",                    "<C-A-Up>",     ":t -1<CR>",                                                      { noremap = true, silent = true })
-map("n",                    "<C-w>c",       ":bd<CR>",                                                        { noremap = true, silent = true })
+-- map("n",                    "<C-w>c",       ":bd<CR>",                                                        { noremap = true, silent = true })
 map("n",                    "<C-p>",        "\"0p",                                                           { noremap = true, silent = true })
 map("n",                    "<C-PageDown>", ":bnext<CR>",                                                     { noremap = true, silent = true })
 map("n",                    "<C-PageUp>",   ":bprevious<CR>",                                                 { noremap = true, silent = true })
